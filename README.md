@@ -18,12 +18,12 @@ If you choose, you may follow the steps below instead of watching the set up vid
 To begin, you must have Git, Python 3, and Wing IDE 101 installed on your computer. First check and see if a system administrator or teacher has installed this software for you. If no one has installed this software, then you can download these packages from these locations. Be sure to get the Windows version if you are running Microsoft Windows or the Mac version if you are running Mac OS X. 
 
 	* Git
-		* `Git For Windows <https://git-scm.com/download/win>`_
-		* `Git for Mac <https://git-scm.com/download/mac>`_
+		+ `Git For Windows <https://git-scm.com/download/win>`_
+		+ `Git for Mac <https://git-scm.com/download/mac>`_
 	* `Python 3 <https://www.python.org/downloads/>`_
-		* Be sure to click on the Download link for Python 3.x.y on the page. Using Python 2.x.y will not work for this instructional project. 
+		+ Be sure to click on the Download link for Python 3.x.y on the page. Using Python 2.x.y will not work for this instructional project. 
 	* Wing IDE 101 from Wingware.com `<http://wingware.com/downloads/wingide-101/>`_
-		* This is a free program from Wingware. The program is free for educational use.
+		+ This is a free program from Wingware. The program is free for educational use.
 
 
 Configuring Wing 101
