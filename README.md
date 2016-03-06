@@ -43,8 +43,8 @@ To get the most from these lessons, watch them in order and do the indicated exe
 
 Have fun and enjoy the lectures and building an arcade game in Python!
 
-	* Lesson One - Getting Started
-	* Lesson Two - Organization of the Code
-	* Lesson Three
+* Lesson One - Getting Started
+* Lesson Two - Organization of the Code
+* Lesson Three
 
 
