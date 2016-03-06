@@ -52,7 +52,7 @@ To begin you must open a terminal window (a command shell in Windows) and
 * Lesson Five - The FroggerApplication; Drawing a river and a road. 
 
   [Additional Frogger images can be found here](http://strategywiki.org/wiki/Frogger/Getting_Started). Additional images are not required for any of the lessons presented here. 
-  
+
 * Lesson Six - A Frog Class
 * Lesson Seven - A Racecar Class
 * Lesson Eight - A Log Class
@@ -60,9 +60,6 @@ To begin you must open a terminal window (a command shell in Windows) and
 * Lesson Ten - Jumping on Logs
 * Lesson Eleven - Alligators or Crocodiles
 * Lesson Twelve - Keeping Score
-
-
-* Lesson Three - 
 
 Have fun and enjoy the lectures and building an arcade game in Python!
 
