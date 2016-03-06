@@ -42,7 +42,7 @@ To get the most from these lessons, watch them in order and do the indicated exe
 
 Have fun and enjoy the lectures and building an arcade game in Python!
 
-* Lesson One - Getting Started
+* Lesson One - Getting Started. [Additional Frogger images can be found here](http://strategywiki.org/wiki/Frogger/Getting_Started).
 * Lesson Two - Organization of the Code
 * Lesson Three
 
