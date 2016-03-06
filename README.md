@@ -40,10 +40,30 @@ Don't worry if something gets messed up in your code at some point in a lesson. 
 
 To get the most from these lessons, watch them in order and do the indicated exercises until you feel comfortable you understand all the concepts that are taught. If you feel you need additional information, you may find online resources for learning Python programming or you can buy the text [Python Programming Fundamentals](http://www.amazon.com/Programming-Fundamentals-Undergraduate-Computer-Science/dp/1849965366/ref=sr_1_1?ie=UTF8&qid=1457286492&sr=8-1&keywords=python+programming+fundamentals) by me. It contains additional information and useful exercises with solutions provided to practice problems in the text.
 
-Have fun and enjoy the lectures and building an arcade game in Python!
+To begin you must open a terminal window (a command shell in Windows) and 
 
-* Lesson One - Getting Started. [Additional Frogger images can be found here](http://strategywiki.org/wiki/Frogger/Getting_Started).
-* Lesson Two - Organization of the Code
-* Lesson Three
+* Lesson One - Getting Started. 
+	
+  You can find additional documentation on what you can do with [turtle graphics here](https://docs.python.org/3.5/library/turtle.html). 
+
+* Lesson Two - Defining Functions
+* Lesson Three - Drawing Circles
+* Lesson Four - Defining Classes
+* Lesson Five - The FroggerApplication; Drawing a river and a road. 
+
+  [Additional Frogger images can be found here](http://strategywiki.org/wiki/Frogger/Getting_Started). Additional images are not required for any of the lessons presented here. 
+  
+* Lesson Six - A Frog Class
+* Lesson Seven - A Racecar Class
+* Lesson Eight - A Log Class
+* Lesson Nine - Avoiding Cars
+* Lesson Ten - Jumping on Logs
+* Lesson Eleven - Alligators or Crocodiles
+* Lesson Twelve - Keeping Score
+
+
+* Lesson Three - 
+
+Have fun and enjoy the lectures and building an arcade game in Python!
 
 
