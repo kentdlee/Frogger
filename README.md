@@ -1,4 +1,3 @@
-# Frogger
 Welcome to a Python Programming Project!
 ========================================
 
