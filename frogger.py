@@ -9,6 +9,21 @@ def distance(x1,y1,x2,y2):
     c = math.sqrt(a**2 + b**2)
     
     return c
+
+def rectangularIntersect(x1,y1,x2,y2):
+    if y1 < y2 - 20:
+        return False
+    
+    if y1 > y2 + 20:
+        return False
+    
+    if x1 < x2 - 60:
+        return False
+    
+    if x1 > x2 + 60:
+        return False
+    
+    return True
     
 
 class Frog(RawTurtle):
@@ -48,11 +63,23 @@ class Log(RawTurtle):
         self.penup()
         self.goto(x,y)
         
-    def forward(self, distance):
+    def forward(self, distance, frog):
+        if rectangularIntersect(self.xcor(), self.ycor(), frog.xcor(), frog.ycor()):
+            moveFrog = True
+        else:
+            moveFrog = False
+            
         if self.xcor() > 400:
             self.goto(-400,self.ycor())
+            if moveFrog:
+                frog.goto(self.xcor(), self.ycor())
             
-        super().forward(distance)        
+        if moveFrog:
+            frog.right(90)
+            frog.forward(distance)
+            frog.left(90)
+            
+        super().forward(distance)       
 
 class FroggerApplication(tkinter.Frame):
     def __init__(self, master=None):
@@ -137,7 +164,7 @@ class FroggerApplication(tkinter.Frame):
                     frog.goto(0,-250)
                 
             for log in logs:
-                log.forward(2)
+                log.forward(2, frog)
                 
             screen.update()
             screen.ontimer(animate, 1)
