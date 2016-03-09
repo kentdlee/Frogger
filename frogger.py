@@ -2,6 +2,15 @@ from turtle import *
 import tkinter
 import math
 
+def distance(x1,y1,x2,y2):
+    a = y1 - y2
+    b = x2 - x1
+    
+    c = math.sqrt(a**2 + b**2)
+    
+    return c
+    
+
 class Frog(RawTurtle):
     def __init__(self,canvas):
         super().__init__(canvas)
@@ -18,11 +27,19 @@ class RaceCar(RawTurtle):
         self.penup()
         self.goto(x,y)
         
-    def forward(self, distance):
+    def forward(self, dist, frog):
+        frogDist = distance(frog.xcor(), frog.ycor(), self.xcor(), self.ycor())
+        
+        if frogDist < 40:
+            self.getscreen().update()
+            tkinter.messagebox.showinfo("Ouch", "You ran me over!")
+            return False
+        
         if self.xcor() < -400:
             self.goto(400,self.ycor())
             
-        super().forward(distance)
+        super().forward(dist)
+        return True
       
 class Log(RawTurtle):
     def __init__(self,canvas,x,y):
@@ -116,7 +133,8 @@ class FroggerApplication(tkinter.Frame):
         
         def animate():
             for car in cars:
-                car.forward(2)
+                if not car.forward(2, frog):
+                    frog.goto(0,-250)
                 
             for log in logs:
                 log.forward(2)
