@@ -108,6 +108,44 @@ class FroggerApplication(tkinter.Frame):
         canvas = tkinter.Canvas(self,width=600,height=600)
         canvas.pack(side=tkinter.LEFT)
         
+        frame = tkinter.Frame(self)
+        frame.pack(side=tkinter.RIGHT, fill=tkinter.BOTH)
+        scoreVal = tkinter.StringVar()
+        scoreVal.set("0")
+        scoreTitle = tkinter.Label(frame,text="Score")
+        scoreTitle.pack()
+        scoreFrame = tkinter.Frame(frame,height=2,bd=1,relief=tkinter.SUNKEN)
+        scoreFrame.pack()
+        score = tkinter.Label(scoreFrame,height=2,width=20,textvariable=scoreVal,fg="yellow",bg="black")
+        score.pack()
+        
+        livesTitle = tkinter.Label(frame,text="Frog Lives Remaining")
+        livesTitle.pack()
+        
+        livesFrame = tkinter.Frame(frame, height=50,width=60,relief=tkinter.SUNKEN)
+        livesFrame.pack()
+        livesCanvas = ScrolledCanvas(livesFrame,150,50,150,50)
+        livesCanvas.pack()
+        
+        livesTurtle = RawTurtle(livesCanvas)
+        livesScreen = livesTurtle.getscreen()
+        livesScreen.tracer(0)
+        livesTurtle.ht()
+        livesScreen.bgcolor("black")
+        livesScreen.register_shape("images/frogger.gif")
+        f1 = Frog(livesCanvas)
+        f2 = Frog(livesCanvas)
+        f3 = Frog(livesCanvas)
+        f1.goto(-50,0)
+        f2.goto(0,0)
+        f3.goto(50,0)
+        lives = [f1, f2, f3]
+        livesScreen.update()
+        self.score = 0
+        self.lives = 4
+        
+        
+        
         turtle = RawTurtle(canvas)
         screen = turtle.getscreen()
         screen.tracer(0)
@@ -154,12 +192,16 @@ class FroggerApplication(tkinter.Frame):
         frog = Frog(canvas)
         
         def jump():
+            self.score += 10
+            scoreVal.set(str(self.score))
             frog.forward(10)
             screen.update()
             
         screen.onkeypress(jump, "Up")
         
         def superJump():
+            self.score += 50
+            scoreVal.set(str(self.score))
             frog.forward(50)
             screen.update()
             
@@ -198,6 +240,14 @@ class FroggerApplication(tkinter.Frame):
             for car in cars:
                 if not car.forward(2, frog):
                     frog.goto(0,-250)
+                    self.lives = self.lives - 1
+                    if self.lives == 0:
+                        tkinter.messagebox.showinfo("Game Over", "Thanks for playing...")
+                        return
+                        
+                    lives[self.lives-1].ht()  
+                    livesScreen.update()
+                    
                 
             onALog = False
             for log in logs:
@@ -207,11 +257,19 @@ class FroggerApplication(tkinter.Frame):
             if not onALog and frog.ycor() > 0 and frog.ycor() < 200:
                 tkinter.messagebox.showinfo("YumYum", "You just fed the crocodiles...")
                 frog.goto(0,-250)
+                self.lives = self.lives - 1
+                if self.lives == 0:
+                    tkinter.messagebox.showinfo("Game Over", "Thanks for playing...")
+                    return                
+                lives[self.lives-1].ht()
+                livesScreen.update()
+                
                 
             for croc in crocs:
                 croc.forward(2)
                 
             screen.update()
+            
             screen.ontimer(animate, 1)
                 
         screen.ontimer(animate)
