@@ -79,6 +79,22 @@ class Log(RawTurtle):
             frog.forward(distance)
             frog.left(90)
             
+        super().forward(distance)  
+        
+        return moveFrog
+
+class Croc(RawTurtle):
+    def __init__(self,canvas,x,y):
+        super().__init__(canvas)
+        self.shape("images/crock.gif")
+        self.penup()
+        self.goto(x,y)
+        
+    def forward(self, distance):
+              
+        if self.xcor() > 400:
+            self.goto(-400,self.ycor())
+          
         super().forward(distance)       
 
 class FroggerApplication(tkinter.Frame):
@@ -98,6 +114,7 @@ class FroggerApplication(tkinter.Frame):
         screen.register_shape("images/frogger.gif")
         screen.register_shape("images/racecar.gif")
         screen.register_shape("images/log.gif")
+        screen.register_shape("images/crock.gif")
         
         turtle.color("blue")
         turtle.fillcolor("blue")
@@ -142,6 +159,25 @@ class FroggerApplication(tkinter.Frame):
             
         screen.onkeypress(jump, "Up")
         
+        def superJump():
+            frog.forward(50)
+            screen.update()
+            
+        screen.onkeypress(superJump, "h")
+        
+        crocs = []
+        
+        croc = Croc(canvas, -800, 150)
+        crocs.append(croc)
+        
+        # -900, 50
+        croc = Croc(canvas, -900, 50)
+        crocs.append(croc)
+        
+        # 1000, 150
+        croc = Croc(canvas, -1000, 150)
+        crocs.append(croc)        
+        
         car = RaceCar(canvas, 500, -50)
         cars = []
         cars.append(car)
@@ -163,8 +199,17 @@ class FroggerApplication(tkinter.Frame):
                 if not car.forward(2, frog):
                     frog.goto(0,-250)
                 
+            onALog = False
             for log in logs:
-                log.forward(2, frog)
+                if log.forward(2, frog):
+                    onALog = True
+                    
+            if not onALog and frog.ycor() > 0 and frog.ycor() < 200:
+                tkinter.messagebox.showinfo("YumYum", "You just fed the crocodiles...")
+                frog.goto(0,-250)
+                
+            for croc in crocs:
+                croc.forward(2)
                 
             screen.update()
             screen.ontimer(animate, 1)
