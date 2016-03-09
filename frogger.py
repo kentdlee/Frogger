@@ -2,6 +2,14 @@ from turtle import *
 import tkinter
 import math
 
+class Frog(RawTurtle):
+    def __init__(self,canvas):
+        super().__init__(canvas)
+        self.shape("images/frogger.gif")
+        self.left(90)
+        self.penup()
+        self.goto(0,-250)
+
 class FroggerApplication(tkinter.Frame):
     def __init__(self, master=None):
         super().__init__(master)
@@ -14,6 +22,9 @@ class FroggerApplication(tkinter.Frame):
         canvas.pack(side=tkinter.LEFT)
         
         turtle = RawTurtle(canvas)
+        screen = turtle.getscreen()
+        screen.tracer(0)
+        screen.register_shape("images/frogger.gif")
         
         turtle.color("blue")
         turtle.fillcolor("blue")
@@ -33,6 +44,21 @@ class FroggerApplication(tkinter.Frame):
             
         turtle.end_fill() 
         turtle.ht()
+        
+        frog = Frog(canvas)
+        
+        def jump():
+            frog.forward(10)
+            screen.update()
+            
+        screen.onkeypress(jump, "Up")
+        screen.listen()
+        
+        screen.update()
+            
+        
+        
+        
             
         
             
