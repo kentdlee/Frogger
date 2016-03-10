@@ -7,7 +7,6 @@ def distance(x1,y1,x2,y2):
     b = x2 - x1
     
     c = math.sqrt(a**2 + b**2)
-    
     return c
 
 def rectangularIntersect(x1,y1,x2,y2):
