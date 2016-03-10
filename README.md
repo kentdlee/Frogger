@@ -9,6 +9,7 @@ in a fun and interesting way.
 
 There is a [playlist for all these videos on Youtube](https://www.youtube.com/playlist?list=PL8tLy_7ToXL9-Z_5GoWI_01-op8SeyN2E).
 
+
 Prerequisites
 ---------------
 
