@@ -7,6 +7,8 @@ This instructional project and series of videos in no way attempts to replace or
 compete with the Frogger video game. The project is intended to teach computer programming
 in a fun and interesting way. 
 
+There is a [playlist for all these videos on Youtube](https://www.youtube.com/playlist?list=PL8tLy_7ToXL9-Z_5GoWI_01-op8SeyN2E).
+
 Prerequisites
 ---------------
 
@@ -40,19 +42,17 @@ Don't worry if something gets messed up in your code at some point in a lesson. 
 
 To get the most from these lessons, watch them in order and do the indicated exercises until you feel comfortable you understand all the concepts that are taught. If you feel you need additional information, you may find online resources for learning Python programming or you can buy the text [Python Programming Fundamentals](http://www.amazon.com/Programming-Fundamentals-Undergraduate-Computer-Science/dp/1849965366/ref=sr_1_1?ie=UTF8&qid=1457286492&sr=8-1&keywords=python+programming+fundamentals) by me. It contains additional information and useful exercises with solutions provided to practice problems in the text.
 
-To begin you must open a terminal window (a command shell in Windows) and 
-
-* Lesson One - Getting Started. 
+To begin you must open a terminal window (a command shell in Windows) and issue the command:
 	
-  You can find additional documentation on what you can do with [turtle graphics here](https://docs.python.org/3.5/library/turtle.html). 
+	git clone https://github.com/kentdlee/Frogger
 
+Each of the lessons goes through the steps that you must executed to get the code for that lesson. The first four lessons provide some backgound on Python. The last eight lessons build the application. An outline of the lessons is provided below. 
+
+* Lesson One - Getting Started. You can find additional documentation on what you can do with [turtle graphics here](https://docs.python.org/3.5/library/turtle.html). 
 * Lesson Two - Defining Functions
 * Lesson Three - Drawing Circles
 * Lesson Four - Defining Classes
-* Lesson Five - The FroggerApplication; Drawing a river and a road. 
-
-  [Additional Frogger images can be found here](http://strategywiki.org/wiki/Frogger/Getting_Started). Additional images are not required for any of the lessons presented here. 
-
+* Lesson Five - The FroggerApplication; Drawing a river and a road. [Additional Frogger images can be found here](http://strategywiki.org/wiki/Frogger/Getting_Started). Additional images are not required for any of the lessons presented here. 
 * Lesson Six - A Frog Class
 * Lesson Seven - A Racecar Class
 * Lesson Eight - A Log Class
@@ -61,6 +61,6 @@ To begin you must open a terminal window (a command shell in Windows) and
 * Lesson Eleven - Alligators or Crocodiles
 * Lesson Twelve - Keeping Score
 
-Have fun and enjoy the lectures and building an arcade game in Python!
+Have fun and enjoy the lectures and building an arcade game in Python! 
 
 
