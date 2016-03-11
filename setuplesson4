@@ -1,0 +1,5 @@
+#!/bin/bash
+a=$0
+xpath=${a%/*}
+cd $xpath
+git checkout -f lesson4 > /dev/null 2> /dev/null
