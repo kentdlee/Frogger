@@ -7,6 +7,7 @@ if [ "$cwd" = "Frogger-master" ]
 then
 	cd ..
 	rm -Rf Frogger-master
+	rm Frogger-master.zip
 	git clone https://github.com/kentdlee/Frogger
 fi
 
