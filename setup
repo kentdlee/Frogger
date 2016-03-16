@@ -1,0 +1,10 @@
+#!/bin/bash
+cwd=${PWD##*/}
+echo $cwd
+if [ "$cwd" = "Frogger-master" ]
+then
+	cd ..
+	rm -Rf Frogger-master
+	git clone https://github.com/kentdlee/Frogger
+fi
+

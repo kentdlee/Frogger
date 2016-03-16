@@ -35,7 +35,9 @@ After downloading and installing the programs above, you must configure Wing IDE
 
 The Lessons
 -------------
-Once you have completed the steps under the prerequisites and configured Wing 1010 you are ready to begin the lessons. You do the lessons by watching each video, following the steps contained in each. 
+Once you have completed the steps under the prerequisites and configured Wing 1010 you are ready to begin the lessons. You do the lessons by watching the video for a lesson, following the steps contained in each. [You can access the lesson videos on YouTube by clicking here](https://www.youtube.com/playlist?list=PL8tLy_7ToXL9-Z_5GoWI_01-op8SeyN2E).
+
+At the beginning of each video you are prompted to execute a *git* command from a terminal window. If you don't have access to a terminal window, you may be able to run a script instead to set up each lesson. If you don't have access to a terminal window, download the zip file of the master branch of this project. Put Frogger-master.zip where you want it on your system (i.e. your Documents folder). Unzip or uncompress the zip file. Navigate to the Frogger-master folder. Then double-click on the *setup* file. This will create a new folder called *Frogger* which will be set up correcty to do each of the lessons. If you don't have access to a terminal window then before doing a lesson, double-click on the *setuplessonX* file where *X* is the number of the lesson. So, you would double-click *setuplesson1* to setup the project before watching the video for lesson 1. If the directions in this paragraph don't work for you it is because you don't have a computer that can run *bash* programs. In that case you would need to get access to a terminal window for your system.
 
 You will be asked to pause videos at certain points. You should pause them and then try the indicated excercises. When you restart the video you will be shown the correct answer to give you immediate feedback. 
 
